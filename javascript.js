@@ -10,3 +10,6 @@ function goToHome(){
 function goToAbout(){
     location.href = "abouttheauthor.html";
 }
+function loadNavBar(){
+    document.getElementById("nav-placeholder").innerHTML='<object type="text/html" data="navbar.html" ></object>';
+}
