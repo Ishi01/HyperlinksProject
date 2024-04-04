@@ -1,18 +1,12 @@
-<!-- Bootstrap Stylesheet importing-->
+<!-- Bootstrap and Stylesheet importing-->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="cssStyling.css">
 <script type="text/javascript" src="javascript.js"></script>
-
 <!-- TRY USING THE BOOTRSRAP CLASS NAVBAR TO DO A NAVBAR-->
 
 <!DOCTYPE html>
 <html lang="en">
-
-<nav id="nav-placeholder" style="padding: 0;">
-
-</nav>
-
 
 <head>
   <!--Header imprts-->
@@ -28,6 +22,9 @@
       <!-- Links -->
       <ul class="navbar-nav">
         <li class="nav-item">
+          <a class="navbar-brand" href="#">CITS5506 Individual Project</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link active py-0" href="#" onclick="goToHome()">Home Page</a>
         </li>
         <li class="nav-item">
@@ -37,29 +34,49 @@
           <a class="nav-link active py-0" href="#" onclick="goToAbout()">About the Author</a>
         </li>
       </ul>
+      <a class="nav-item">
+        <a class="navbar-brand" href="#">Written By William Spain, ID:23954266</a>
+      </a>
     </div>
   </nav>
   <!--Navbar Code Ends-->
-  
+
+  <!-- Header bar -->
   <div class="row">    
       <div class="col-sm-12" margin-bottom:20px margin-top:20px>
-          <h1>Header</h1>
+          <h1>The Concept of Hyperlinks</h1>
       </div>
   </div>
   
+  <!-- Page Index and Content -->
   <div class="container-fluid">
-      <div class="row"> 
-          <div class="col box1 min-vh-100 bg-info" style="background-color: rgb(242, 242, 252);">
-              <menuHead>Column 1</menuHead>
-              <p>Some text..</p>
+      <div class="row">
+        <!-- Page Index --> 
+          <div class="col-sm-2 min-vh-100" id="indexColumn">
+              <h2 id="col">Index</h2>
+              <ol>
+                <li><a href="#homeIntro">Introduction</a></li>
+                <li><a href="#homeImplementation">Implementation of Hyperlinks</a></li>
+              </ol>
           </div>
-          <div class="col-sm-10" style="background-color: rgb(173, 247, 247);">
-              <menuHead>Column 2</menuHead>
-              <p>Some text..</p>
-          </div>
-          <div class="col-sm-1" style="background-color: rgb(207, 207, 255);">
-              <menuHead>Column 3</menuHead>
-              <p>Some text..</p>
+          <!-- Page Content -->
+          <div class="col-sm-10" id="bodyColumn">
+              <h2 id="homeIntro">Introduction</h2>
+              <p>Hyperlinks are one of the core concepts that allow the internet as we know it today to function. 
+                In the simplest terms, the function of a hyperlink is to redirect the user 
+                from where they currently are on a webpage to somewhere else, either somewhere in the same page, a 
+                different page on the same website, a different website entirely, or pretty anywhere you can go on the internet. 
+                The hyperlink can also direct to a specific section of the same, or another, webpage using an anchor tag. It can also 
+                initiate the download for an external resource or file, or provide an expanded view of an image or video.
+              </p>
+              <br>
+              <h2 id="homeImplementation"> Implementation of Hyperlinks</h2>
+              <p> From the web-developers perspective, the implementation of hyperlinks varies depending on the purpose of the link. 
+                For on-page links, the implementation relies primarily on the use of an anchor tag. 
+                These tags allow you specify an href attribute, which is usually the ID of a page element which you want the user to jump to when the anchor tag is clicked.
+                Anchor tags can be attached to virtually any element in a web page, but are most commonly attached to either buttons or links, using the classic blue underlined text, which has become the ubiquitous UI language for pretty much any form of link.
+                For an example of this, see the index to the left of this text.
+              </p>
           </div>
       </div>
   </div>

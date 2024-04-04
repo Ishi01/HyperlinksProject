@@ -6,23 +6,65 @@ body, h1, p {
   padding: 0;
 }
 
+.navbar-brand {
+  font-size: medium!important;
+}
+
+/* Style the links in the navigation bar */
+.nav-item > .nav-link {
+  color: #58d4d9!important;
+  text-decoration: underline!important;
+  
+}
+
 /* Set font and background color */
 body {
   font-family: Arial, sans-serif;
   background-color: #E9E9E9;
 }
 
+/*Hover style for navbar links*/
 .nav-item:hover {
   background-color: rgb(0, 0, 0);
+}
+
+/*style the menue header*/
+.menuHead{
+  color: #58d4d9;
+  font-weight: bold!important;
 }
 
 /* Style headings */
 h1 {
   font-size: 24px;
   font-weight: bold;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
   color: #E9E9E9;
   background-color: #69686c;
+}
+
+/*style subheadings*/
+h2 {
+  font-size: 18px;
+  padding-top: 5px;
+  font-weight: bold;
+  color: rgb(54, 54, 54);
+
+}
+
+/*style paragraph text*/
+p{
+  color: rgb(54, 54, 54);
+}
+
+/*Style index column*/
+#indexColumn {
+  background-color: rgb(150, 221, 221)
+}
+
+/*Style body column*/
+#bodyColumn{
+  background-color: rgb(218, 250, 250);
 }
