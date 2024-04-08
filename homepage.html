@@ -3,7 +3,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="cssStyling.css">
 <script type="text/javascript" src="javascript.js"></script>
-<!-- TRY USING THE BOOTRSRAP CLASS NAVBAR TO DO A NAVBAR-->
+
+<!-- The writing of the following code was assited by the use of GitHub Copilot, an AI-based code assistant.-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,13 +57,16 @@
               <h2 id="col">Index</h2>
               <ol>
                 <li><a href="#homeIntro">Introduction</a></li>
-                <li><a href="#homeImplementation">Implementation of Hyperlinks</a></li>
+                <li><a href="#homeImplementation">Implementation of Hyperlinks (Web Developers)</a></li>
+                <li><a href="#homeBrowsers">Implementation of Hyperlinks (Web Browsers)</a></li>
               </ol>
           </div>
           <!-- Page Content -->
           <div class="col-sm-10" id="bodyColumn">
+              <!-- Into Header and Content -->
               <h2 id="homeIntro">Introduction</h2>
-              <p>Hyperlinks are one of the core concepts that allow the internet as we know it today to function. 
+              <p>
+                &emsp;Hyperlinks are one of the core concepts that allow the internet as we know it today to function. 
                 In the simplest terms, the function of a hyperlink is to redirect the user 
                 from where they currently are on a webpage to somewhere else, either somewhere in the same page, a 
                 different page on the same website, a different website entirely, or pretty anywhere you can go on the internet. 
@@ -70,15 +74,64 @@
                 initiate the download for an external resource or file, or provide an expanded view of an image or video.
               </p>
               <br>
-              <h2 id="homeImplementation"> Implementation of Hyperlinks</h2>
-              <p> From the web-developers perspective, the implementation of hyperlinks varies depending on the purpose of the link. 
+              <!-- Web Developer Implementation Header and Content -->
+              <h2 id="homeImplementation"> Implementation of Hyperlinks (Web Developers)</h2>
+              <p> 
+                &emsp;From the web-developers perspective, the implementation of hyperlinks varies depending on the purpose of the link. 
                 For on-page links, the implementation relies primarily on the use of an anchor tag. 
                 These tags allow you specify an href attribute, which is usually the ID of a page element which you want the user to jump to when the anchor tag is clicked.
                 Anchor tags can be attached to virtually any element in a web page, but are most commonly attached to either buttons or links, using the classic blue underlined text, which has become the ubiquitous UI language for pretty much any form of link.
                 For an example of this, see the index to the left of this text.
+                <br>
+                <br>
+	              &emsp;When a link is used to direct a user to a different page on the same website, the most common implementation is to use some simple Javascript alongside the HTML in order to instruct the web browser to load a separate page. 
+                More precisely, the most common implementation involves the usage of an onclick event handler for a specific HTML element (most commonly a link or button), which is used to call a javascript function. 
+                This function can either be placed in the same HTML document using the script tag, or in a separate javascript file linked to the HTML file. 
+                These functions redirect the page using a location.href change, using a location reference to a separate document in the website's document tree. 
+                For an example of this behavior, see the navbar at the top of this page, which uses this implementation to redirect to the other pages on this website.
+                <br>
+                <br>
+                &emsp;When the web developer wishes to use an element to redirect to a separate web page entirely, a slightly different implementation is required. 
+                The code on the web developers side is relatively similar, simply changing the location.href argument used in the previous section with the <a href="https://www.techtarget.com/searchnetworking/definition/URL">URL (Uniform Resource Locator)</a> of the website you wish to redirect to.
+                Alternatively, a simple anchor tag can be used to redirect to a different page by specifiying the URL in the href attribute. 
+                However, this changes what the web browser is required to do rather dramatically. 
+                When the web browser receives a location change request which redirects to a different web page, it necessitates the usage of a DNS Lookup in order to determine the IP address of the page you wish to load. 
+                The web browser then uses this IP address to load the page. More information on this will be provided in the Browsers section of the implementation. For more information on URLs (and an example of how this works), please follow the link present in the above paragraph.
+
               </p>
+              <br>
+              <!-- Browser Implemenation Header and Content -->
+              <h2 id="homeBrowsers">Implementation of Hyperlinks (Web Browsers)</h2>
+              <p>
+	              &emsp;The browser implementation of hyperlinks occurs in several stages. 
+                Firstly, the browser must retrieve and render the web page which contains the hyperlink. 
+                This is done through interpreting the HTML and CSS contained within the page, which can vary slightly depending on the browser. 
+                It then searches through the HTML and javascript to locate clickable elements, either anchor tags or other elements connected to javascript functions, and renders these accordingly. 
+                The browser then waits for the user to interact with these elements through the usage of Event Listeners, most commonly the onclick event listener mentioned above.
+                <br>
+                <br>
+	              &emsp;Once one of these elements is interacted with/called, the browser either runs the associated javascript, which likely contains a reassignment of the location.href attribute, or searches the anchor tag for the href link. 
+                In both cases, these items contain the URL, or Uniform Resource Locator, of the website the developer wishes to link to. Once the browser determines this, it performs a DNS lookup of the URL. 
+                For this, the browser reaches out to a DNS server using the internet connection, and requests the IP address of the server which is associated with the URL. 
+                DNS servers are essentially a publicly available catalog of URLs and their associated IP addresses, which are used by browsers to translate the much more human readable URL into an IP address, which is what computers actually use to navigate the web.
+                <br>
+                <br>
+	              &emsp;Now that the browser has the IP address of the server hosting the webpage it is trying to navigate to, it uses this IP to locate the server and perform an HTTP request, essentially asking the server to send it all of the HTML, CSS and Javascript it requires in order to render the webpage. 
+                It then downloads all of this content (and an associated multimedia, such as pictures or videos), and renders it according to the HTML and CSS the server provided.
+                This page is then presented to the user, who can then interact with the page as they see fit.
+                Notably, most browsers implement some form of a back button, which allows the user to return to the page they were previously on. 
+                These pages are often also cached, to limit the amount of data the browser needs to download in order to render the page, as well as the loading times.
+              </p>
+              <br>
+              <br>
           </div>
       </div>
   </div>
 </body>
 </html>
+
+<!-- Sources used
+https://getbootstrap.com/docs/4.0/components/navbar/
+https://www.semrush.com/blog/html-link-code/
+https://www.techtarget.com/searchnetworking/definition/URL
+-->
