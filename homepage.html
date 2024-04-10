@@ -80,12 +80,13 @@
                 &emsp;From the web-developers perspective, the implementation of hyperlinks varies depending on the purpose of the link. 
                 For on-page links, the implementation relies primarily on the use of an anchor tag. 
                 These tags allow you specify an href attribute, which is usually the ID of a page element which you want the user to jump to when the anchor tag is clicked.
-                Anchor tags can be attached to virtually any element in a web page, but are most commonly attached to either buttons or links, using the classic blue underlined text, which has become the ubiquitous UI language for pretty much any form of link.
+                Since href attributes can be attached to virtually any element in a web page, this allows automatic scrolling to pretty much any specified element when the element is clicked.
+                Additionally, anchor tags can be attached to virtually any element in a web page, but are most commonly attached to either buttons or links, using the classic blue underlined text, which has become the ubiquitous UI language for pretty much any form of link.
                 For an example of this, see the index to the left of this text.
                 <br>
                 <br>
 	              &emsp;When a link is used to direct a user to a different page on the same website, the most common implementation is to use some simple Javascript alongside the HTML in order to instruct the web browser to load a separate page. 
-                More precisely, the most common implementation involves the usage of an onclick event handler for a specific HTML element (most commonly a link or button), which is used to call a javascript function. 
+                More precisely, this involves the usage of an onclick event handler for a specific HTML element (most commonly a link or button), which is used to call a javascript function. 
                 This function can either be placed in the same HTML document using the script tag, or in a separate javascript file linked to the HTML file. 
                 These functions redirect the page using a location.href change, using a location reference to a separate document in the website's document tree. 
                 For an example of this behavior, see the navbar at the top of this page, which uses this implementation to redirect to the other pages on this website.
