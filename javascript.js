@@ -19,7 +19,10 @@ function dynamicLinkExample(){
     if (option1State == true){
         location.href = "homepage.html";
     }
-    if (option2State == true){
+    else if (option2State == true){
         location.href = "abouttheauthor.html";
+    }
+    else{
+        alert("Please select an option!");
     }
 }

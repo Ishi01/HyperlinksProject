@@ -25,7 +25,7 @@
           <a class="navbar-brand" href="#">CITS5506 Individual Project</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active py-0" href="#" onclick="goToHome()">Home Page</a>
+          <a class="nav-link active py-0" href="#" onclick="goToHome()">Concept Page</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active py-0" href="#" onclick="goToHistory()">History Page</a>
@@ -56,6 +56,7 @@
             <ol>
               <li><a href="#historyInto">Early Conceptualisation and Creation</a></li>
               <li><a href="#historyDevelopment">Development and Standardization</a></li>
+              <li><a href="#evolution">Evolution</a></li>
             </ol>
         </div>
         <!-- Page Content -->
@@ -99,20 +100,24 @@
             <br>
             <h2 id="evolution">Evolution of Hyperlinks</h2>
             <p>
-              In the years since their development and standardisation as the primary way to navigate the Web, hyperlinks have undergone myriad evolutions and variations, in order to keep up to date with the sheer speed at which the internet has developed and changed. 
+              &emsp;In the years since their development and standardisation as the primary way to navigate the Web, hyperlinks have undergone myriad evolutions and variations, in order to keep up to date with the sheer speed at which the internet has developed and changed. 
               One example of this is the concept of a dynamic hyperlink, which is generated or changed on the fly based on changing information or user input.
               For an example of a dynamic hyperlink, see the demonstration below.
             </p>
-            <div class="d-flex justify-content-center">
-              <button type="button" class="btn btn-primary" onclick="dynamicLinkExample()">Click Me!</button>
+            <!-- Dynamic hyperlinks example, using a link which adjusts its endpoint depending on the selected radio button-->
+            <div class="d-flex justify-content-center" style="margin-top: 20px; margin-bottom: 10px;">
+              <a class="nav-link active py-0" href="#" id="dynamicLinkEx" onclick="dynamicLinkExample()">Click here to see a Dynamic Hyperlink in action!</a>
             </div>
+            
             <div class="d-flex justify-content-center">
               <div class="form-check">
+                <!--Option 1-->
                 <input class="form-check-input" type="radio" name="flexRadioLink" id="linkOption1">
-                <label class="form-check-label" for="linkOption1">
-                  Take me to the History Page
+                <label class="form-check-label" for="linkOption1" style="margin-right: 15px;">
+                  Take me to the Concept Page
                 </label>
               </div>
+              <!--Option 2-->
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioLink" id="linkOption2">
                 <label class="form-check-label" for="linkOption2">
@@ -120,6 +125,18 @@
                 </label>
               </div>
             </div>
+            <br>
+            <p>
+              &emsp;Some further examples of newer types of hyperlinks include social media hyperlinks, which are designed to allow users to navigate directly to different parts of a social media platform from outside of it with a single link. 
+              In this same vein, deep mobile hyperlinks are used to navigate directly to internal parts of a mobile app, while bypassing the home screen of said application entirely. 
+              Furthermore, a combination of dynamic and mobile deep hyperlinks allows the creation of Cross Platform or “Universal” hyperlinks, which adjust based on the operating system currently being used to send users to a specific part of that OS’s version of different applications. 
+              These are only a couple of examples of the many different types, as well as newer underlying technologies, that have been created in the last decade.
+              <br>
+              <br>
+	            &emsp;It is only natural that, given how important hyperlinks are to the function of the internet, they would evolve alongside it, taking on new forms and functions as demanded by its rapid growth and evolution. 
+              The examples above are proof enough of this, and the fact that the internet, and by extension hyperlinks themselves, still function reasonably well is a testament to just how critical a component they have become in the infrastructure of the World Wide Web.
+            </p>
+            <br>
 
         </div>
     </div>

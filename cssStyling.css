@@ -11,10 +11,14 @@ body, h1, p {
 }
 
 /* Style the links in the navigation bar */
-.nav-item > .nav-link {
+.nav-item > .nav-link{
   color: #58d4d9!important;
   text-decoration: underline!important;
-  
+}
+
+#dynamicLinkEx{
+  color: #21a6aa!important;
+  text-decoration: underline!important;
 }
 
 /* Set font and background color */
