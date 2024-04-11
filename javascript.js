@@ -26,3 +26,17 @@ function dynamicLinkExample(){
         alert("Please select an option!");
     }
 }
+
+$(document).ready(function(){
+    $.ajax({
+        url: "https://meowfacts.herokuapp.com/",
+        type: "GET",
+        success: function(result){
+            console.log(result.data[0]);
+            $("#quoteFill").text(result.data[0]);
+        },
+        error: function(error){
+            console.log(`Error ${error}`);
+        }
+    });
+});
