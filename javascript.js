@@ -27,6 +27,12 @@ function dynamicLinkExample(){
     }
 }
 
+function changeBackgroundColor(color){
+    var body = document.getElementById("bodyColumn");
+    body.style.backgroundColor = color;
+}
+
+/*Random cat fact retrieval, once retrieved fills the #quoteFill element*/
 $(document).ready(function(){
     $.ajax({
         url: "https://meowfacts.herokuapp.com/",

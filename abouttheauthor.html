@@ -50,29 +50,57 @@
         <h1>About the Author</h1>
       </div>
 
-      <div id="bodyColumn" class="col-sm-12">
-        <div class="col-sm-12" style="margin-left: 10px;">
+      <div id="bodyColumn" class="col-sm-12 min-vh-100">
+        <div class="col-sm-12"  style="padding-left: 10px;">
+          <div class="col-sm-12">
+            <h2>Change Background Color to:</h2>
+            <button class="btn btn-primary" onclick="changeBackgroundColor('white')">White</button>
+            <button class="btn btn-primary" onclick="changeBackgroundColor('lightgrey')">Light Grey</button>
+            <button class="btn btn-primary" onclick="changeBackgroundColor('lightblue')">Light Blue</button>
+          </div>
+          <!--  Personal Statement-->
           <h2>Personal Statement</h2>
           <p style="margin-left: 10px;">My name is William Spain, and I am currently studying for a Masters of IT at UWA. My hobbies incluude video games, my favourite of which is Sekiro, Shadows Die Twice.
-            I am also an avid reader, with some of my favourite books being the Sherlock Holmes series by Arthur Conan Doyle.
+            I am also an avid reader, with some of my favourite books being the Sherlock Holmes series by Arthur Conan Doyle and The Expanse series by James S. A. Corey.
             Outside of this, I am currently the President of the UWA Kendo club, a martial art I have been practicing for around 1 1/2 years.
+            I am originally from the US, however I have spent a lot of time in the UK, including completing my undergraduate degree there.
+            I have competed in a number of hackathons and eSports tournaments, all while attending the University of Lancaster.
+            I am also an avid SCUBA diver, currently holding an Advanced Open Water Diver license from SDI.
           </p>
+          <!--  Education listing w/ unordered list-->
           <h2>Education</h2>
           <h3 style="margin-left: 10px;">Undergraduate</h3>
           <figure id="timFigure">
-            <img src="lancasterunilogo.png" alt="Lancaster Univeristy Logo" style="height: 80px; width: auto;">
+            <img src="lancasterunilogo.png" alt="Lancaster Univeristy Logo" style="height: 80px; width: auto; margin: 5px;">
+            <br>
+            <img src="profilephoto.jpg" alt="William Spain Profile Photo" style="height: 170px; width: auto; margin-left: 45%;">
+            <figcaption style="margin-left: 40%;">William Spain</figcaption>
           </figure>
           <ul>
             <li>Bachelors of Computer Science with Honours from the University of Lancaster, UK</li>
-            <li>Minor in Economics from the Univeristy of Lancaster, UK.</li>
+            <li>Minor in Principles of Economics from the Univeristy of Lancaster, UK.</li>
+          </ul>
+          <h3 style="margin-left: 10px;">Postgraduate</h3>
+          <ul>
+            <li>Masters of IT at the University of Western Australia (ongoing)</li>
+          </ul>
+          <!--  Work Experience listing w/ unordered list-->
+          <h2>Work Experience</h2>
+          <h3 style="margin-left: 10px;">Internships</h3>
+          <ul>
+            <li>IT Equipment Technician at Intelife Group (2023)</li>
+          </ul>
+          <h3 style="margin-left: 10px;">Part-Time Work</h3>
+          <ul>
+            <li>Bar Staff at Hopstone Brewery, Alamo, CA (2021)</li>
+            <li>Usher at Cinemark Century Movie Theatre, Blackhawk, CA (2019-2020)</li>
           </ul>
           <div class="col-sm-12">
             <!--Random cat fact courtesy of https://github.com/wh-iterabb-it/meowfacts-->
             <h2>Random Cat Fact</h2>
             <p id="quoteFill">Cat Fact will fill here</p>
           </div>
-        </div>
-      
-  </div>
 
+        </div>
+  </div>
 </body>
