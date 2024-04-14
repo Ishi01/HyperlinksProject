@@ -7,6 +7,7 @@
 
 
 <!-- The writing of the following code was assited by the use of GitHub Copilot, an AI-based code assistant.-->
+<!-- Research was assited through the use of ChatGPT, primarily for summarisation of data and to focus research efforts-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -80,9 +81,9 @@
               <h2 id="homeImplementation"> Implementation of Hyperlinks (Web Developers)</h2>
               <p> 
                 &emsp;From the web-developers perspective, the implementation of hyperlinks varies depending on the purpose of the link. 
-                For on-page links, the implementation relies primarily on the use of an anchor tag. 
+                For on-page links, the implementation relies primarily on the use of an anchor tag<sup>[2]</sup>. 
                 These tags allow you specify an href attribute, which is usually the ID of a page element which you want the user to jump to when the anchor tag is clicked.
-                Since href attributes can be attached to virtually any element in a web page, this allows automatic scrolling to pretty much any specified element when the element is clicked.
+                Since href attributes can be attached to virtually any element in a web page, this allows automatic scrolling to pretty much any specified element when the element is clicked<sup>[2]</sup>.
                 Additionally, anchor tags can be attached to virtually any element in a web page, but are most commonly attached to either buttons or links, using the classic blue underlined text, which has become the ubiquitous UI language for pretty much any form of link.
                 For an example of this, see the index to the left of this text.
                 <br>
@@ -90,15 +91,15 @@
 	              &emsp;When a link is used to direct a user to a different page on the same website, the most common implementation is to use some simple Javascript alongside the HTML in order to instruct the web browser to load a separate page. 
                 More precisely, this involves the usage of an onclick event handler for a specific HTML element (most commonly a link or button), which is used to call a javascript function. 
                 This function can either be placed in the same HTML document using the script tag, or in a separate javascript file linked to the HTML file. 
-                These functions redirect the page using a location.href change, using a location reference to a separate document in the website's document tree. 
+                These functions redirect the page using a location.href change, using a location reference to a separate document in the website's document tree, also known as a relative link<sup>[2]</sup>. 
                 For an example of this behavior, see the navbar at the top of this page, which uses this implementation to redirect to the other pages on this website.
                 <br>
                 <br>
                 &emsp;When the web developer wishes to use an element to redirect to a separate web page entirely, a slightly different implementation is required. 
-                The code on the web developers side is relatively similar, simply changing the location.href argument used in the previous section with the <a href="https://www.techtarget.com/searchnetworking/definition/URL">URL (Uniform Resource Locator)</a> of the website you wish to redirect to.
+                The code on the web developers side is relatively similar, simply changing the location.href argument used in the previous section with the <a href="https://www.techtarget.com/searchnetworking/definition/URL">URL (Uniform Resource Locator)</a><sup>[4]</sup> of the website you wish to redirect to.
                 Alternatively, a simple anchor tag can be used to redirect to a different page by specifiying the URL in the href attribute. 
                 However, this changes what the web browser is required to do rather dramatically. 
-                When the web browser receives a location change request which redirects to a different web page, it necessitates the usage of a DNS Lookup in order to determine the IP address of the page you wish to load. 
+                When the web browser receives a location change request which redirects to a different web page, it necessitates the usage of a DNS Lookup in order to determine the IP address of the page you wish to load<sup>[3]</sup>. 
                 The web browser then uses this IP address to load the page. More information on this will be provided in the Browsers section of the implementation. For more information on URLs (and an example of how this works), please follow the link present in the above paragraph.
 
               </p>
@@ -110,13 +111,13 @@
                 Firstly, the browser must retrieve and render the web page which contains the hyperlink. 
                 This is done through interpreting the HTML and CSS contained within the page, which can vary slightly depending on the browser. 
                 It then searches through the HTML and javascript to locate clickable elements, either anchor tags or other elements connected to javascript functions, and renders these accordingly. 
-                The browser then waits for the user to interact with these elements through the usage of Event Listeners, most commonly the onclick event listener mentioned above.
+                The browser then waits for the user to interact with these elements through the usage of Event Listeners, most commonly the onclick event listener mentioned above <sup>[1]</sup>.
                 <br>
                 <br>
 	              &emsp;Once one of these elements is interacted with/called, the browser either runs the associated javascript, which likely contains a reassignment of the location.href attribute, or searches the anchor tag for the href link. 
                 In both cases, these items contain the URL, or Uniform Resource Locator, of the website the developer wishes to link to. Once the browser determines this, it performs a DNS lookup of the URL. 
                 For this, the browser reaches out to a DNS server using the internet connection, and requests the IP address of the server which is associated with the URL. 
-                DNS servers are essentially a publicly available catalog of URLs and their associated IP addresses, which are used by browsers to translate the much more human readable URL into an IP address, which is what computers actually use to navigate the web.
+                DNS servers are essentially a publicly available catalog of URLs and their associated IP addresses, which are used by browsers to translate the much more human readable URL into an IP address, which is what computers actually use to navigate the web<sup>[3]</sup>.
                 <br>
                 <br>
 	              &emsp;Now that the browser has the IP address of the server hosting the webpage it is trying to navigate to, it uses this IP to locate the server and perform an HTTP request, essentially asking the server to send it all of the HTML, CSS and Javascript it requires in order to render the webpage. 
@@ -127,7 +128,18 @@
               </p>
               <br>
               <br>
+              <h2>References</h2>
+              <p>
+                <ol>
+                  <li><a id="referenceLink" href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks">Mozilla Developer Webdocs: What are Hyperlinks</a></li>
+                  <li><a id="referenceLink" href="https://www.w3schools.com/html/html_links.asp">W3 Schools: HTML Links</a></li>
+                  <li><a id="referenceLink" href="https://www.digicert.com/faq/dns/how-does-dns-lookup-work">Digicert: How Does DNS Lookup Work</a></li>
+                  <li><a id="referenceLink" href="https://www.techtarget.com/searchnetworking/definition/URL">TechTarget: Definition of URL </a></li>
+                  <li><a id="referenceLink" href="https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work">Mozilla Developer Webdocs: Populating the Page: How Browsers Work</a> </li>
+                </ol>
+              </p>
           </div>
+
       </div>
   </div>
 </body>
